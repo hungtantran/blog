@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Book Review: Concurrency in Go | My New Hugo Site</title>
+<meta name="keywords" content="" />
+<meta name="description" content="I recently finished reading the book &ldquo;Concurrency in Go&rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.
+I learnt some new things from the books:">
+<meta name="author" content="">
+<link rel="canonical" href="http://example.org/posts/review_concurrency_in_go/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.91.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Book Review: Concurrency in Go" />
+<meta property="og:description" content="I recently finished reading the book &ldquo;Concurrency in Go&rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.
+I learnt some new things from the books:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/review_concurrency_in_go/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-01T16:03:38-05:00" />
+<meta property="article:modified_time" content="2021-01-01T16:03:38-05:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Book Review: Concurrency in Go"/>
+<meta name="twitter:description" content="I recently finished reading the book &ldquo;Concurrency in Go&rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.
+I learnt some new things from the books:"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://example.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Book Review: Concurrency in Go",
+      "item": "http://example.org/posts/review_concurrency_in_go/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Book Review: Concurrency in Go",
+  "name": "Book Review: Concurrency in Go",
+  "description": "I recently finished reading the book \u0026ldquo;Concurrency in Go\u0026rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.\nI learnt some new things from the books:",
+  "keywords": [
+    
+  ],
+  "articleBody": "I recently finished reading the book “Concurrency in Go” by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.\nI learnt some new things from the books:\n Concurrency is a property of the code, parallelism is a property of the running program. I like this observation. Intuitively, I understsand that concurrency means different codes that run together within the same time window while parallelism means different codes that run at the exact same point in time. While concurrent code can run in parallel or not, parallel code must be concurrent. However, that intuitive understanding is rather descrptive more than definitive. The statement above significantly clarify my intuitive understanding. Communicating sequential processes (CSP) The idea that concurrent processes communicating with each other through channel is not new. It has been there with Linux inter-process communication mechanism like pipe and Unix domain socket. However, the idea of modeling all concurrent code with this formal communication is rather new to me. Before, my mental model around concurrent code cooperation had been centered more around shared memory than communication channels. However, shared memory incurs the downside of having developer making careful decisions and implementations around concurrent access in critical sections to avoid race conditions. I couldn’t believe that I didn’t see this line in the Golang sync library before but now it all makes sense. Other than the Once and WaitGroup types, most are intended for use by low-level library routines. Higher-level synchronization is better done via channels and communication. sync.Pool a concurrent-safe implementation of the object pool pattern. This construct is for optimization. Developers can use it to implement patterns like database connection pool and objective pool. The limitation is that object in pools should be mostly read-only and indistinguishable.  and chan as read-only and write-only channel types respectively. Channel ownership The goroutine instantiates a channel should own it. That means the owner goroutine should be the sole goroutine which is responsible for writing and closing it. A owner goroutine can pass ownership to another goroutine. An exception to this rule that I can think of is the case of multiple producers in the producer-consumer pattern. select statement with multiple case clause all ready to be read from will uniformly randomly chose a case statement to evaluate. or-done-channel pattern. Instead of writing this verbose piece of code  for { select { case we can shorten it to\nfor val := range or_done(some_channel, done) { .... }  Adding queue, a.k.a buffered channel, can be dangerous because it can hide deadlock, livelock issues Little's law to analyze a stable system  L = nW L: the average number of units in the system n: average arrival rate of units W: average time a unit spent in the system Little’s law can be used to analyze a QPS, latency and system resource capacity in a webserver or a streaming processing system\n context.Context is a data structure with 2 primary elements 1) a done channel 2) a key-value map of values Goroutine scheduling algorithm: Go runtime uses a work stealing algorithm to schedule go routines. The algorithm uses continuation instead of goroutine as the basic unit. There are 3 primary concepts: OS thread, green thread/context (controlled by GOMAXPROCS env var), continuation/goroutine. (M os threads : P green threads : G goroutine, usually M == P)  When a goroutine reaches a fork-join/preemption point, it can be preempted, and is added to a deque of the existing context. The preemption points include I/O call, function call, syscall and async preemption. Since go 1.14, goroutine can be asynchronously preempted (https://go.dev/doc/go1.14#runtime) so long loop can nolonger deadlock the scheduler or delay GC significantly. (The proposal is at https://github.com/golang/proposal/blob/master/design/24543-non-cooperative-preemption.md) When a continuation is added to a dequeue, another green thread/context can steal the continuation to do it. When a goroutine is blocked by I/O, it is added to a deque of a global context. The goroutine is decoupled from the green thread but still coupled to the OS thread. This way the green thread is free to do other works.    ",
+  "wordCount" : "732",
+  "inLanguage": "en",
+  "datePublished": "2021-01-01T16:03:38-05:00",
+  "dateModified": "2021-01-01T16:03:38-05:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://example.org/posts/review_concurrency_in_go/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Book Review: Concurrency in Go
+    </h1>
+    <div class="post-meta"><span title='2021-01-01 16:03:38 -0500 EST'>January 1, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I recently finished reading the book &ldquo;Concurrency in Go&rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, consisting of a mix of concurrency fundamentals and of specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.</p>
+<p>I learnt some new things from the books:</p>
+<ul>
+<li><code>Concurrency is a property of the code, parallelism is a property of the running program.</code> I like this observation. Intuitively, I understsand that concurrency means different codes that run together within the same time window while parallelism means different codes that run at the exact same point in time. While concurrent code can run in parallel or not, parallel code must be concurrent. However, that intuitive understanding is rather descrptive more than definitive. The statement above significantly clarify my intuitive understanding.</li>
+<li><code>Communicating sequential processes (CSP)</code> The idea that concurrent processes communicating with each other through channel is not new. It has been there with Linux inter-process communication mechanism like pipe and Unix domain socket. However, the idea of modeling all concurrent code with this formal communication is rather new to me. Before, my mental model around concurrent code cooperation had been centered more around shared memory than communication channels. However, shared memory incurs the downside of having developer making careful decisions and implementations around concurrent access in critical sections to avoid race conditions. I couldn&rsquo;t believe that I didn&rsquo;t see this line in the Golang <code>sync</code> library before but now it all makes sense. <code>Other than the Once and WaitGroup types, most are intended for use by low-level library routines. Higher-level synchronization is better done via channels and communication.</code></li>
+<li><code>sync.Pool</code> a concurrent-safe implementation of the object pool pattern. This construct is for optimization. Developers can use it to implement patterns like database connection pool and objective pool. The limitation is that object in pools should be mostly read-only and indistinguishable.</li>
+<li><code>&lt;-chan</code> and <code>chan&lt;-</code> as read-only and write-only channel types respectively.</li>
+<li><code>Channel ownership</code> The goroutine instantiates a channel should own it. That means the owner goroutine should be the sole goroutine which is responsible for writing and closing it. A owner goroutine can pass ownership to another goroutine. An exception to this rule that I can think of is the case of multiple producers in the producer-consumer pattern.</li>
+<li><code>select</code> statement with multiple case clause all ready to be read from will uniformly randomly chose a case statement to evaluate.</li>
+<li><code>or-done-channel</code> pattern. Instead of writing this verbose piece of code</li>
+</ul>
+<pre tabindex="0"><code>for {
+    select {
+    case &lt;-done:
+        ....
+        return
+    case val, ok := &lt;- some_channel:
+        if !ok {
+            return
+        }
+        .....
+    }
+}
+</code></pre><p>we can shorten it to</p>
+<pre tabindex="0"><code>for val := range or_done(some_channel, done) {
+    ....
+}
+</code></pre><ul>
+<li>Adding queue, a.k.a buffered channel, can be dangerous because it can hide deadlock, livelock issues</li>
+<li><code>Little's law</code> to analyze a stable system</li>
+</ul>
+<pre tabindex="0"><code>L = nW
+
+L: the average number of units in the system
+n: average arrival rate of units
+W: average time a unit spent in the system
+</code></pre><p>Little&rsquo;s law can be used to analyze a QPS, latency and system resource capacity in a webserver or a streaming processing system</p>
+<ul>
+<li><code>context.Context</code> is a data structure with 2 primary elements 1) a done channel 2) a key-value map of values</li>
+<li><code>Goroutine scheduling algorithm:</code> Go runtime uses a work stealing algorithm to schedule go routines. The algorithm uses <code>continuation</code> instead of <code>goroutine</code> as the basic unit. There are 3 primary concepts: <code>OS thread</code>, <code>green thread/context</code> (controlled by GOMAXPROCS env var), <code>continuation/goroutine</code>. (M os threads : P green threads : G goroutine, usually M == P)
+<ul>
+<li>When a goroutine reaches a fork-join/preemption point, it can be preempted, and is added to a deque of the existing context. The preemption points include I/O call, function call, syscall and async preemption. Since go 1.14, goroutine can be asynchronously preempted (<a href="https://go.dev/doc/go1.14#runtime">https://go.dev/doc/go1.14#runtime</a>) so long loop can nolonger deadlock the scheduler or delay GC significantly. (The proposal is at <a href="https://github.com/golang/proposal/blob/master/design/24543-non-cooperative-preemption.md">https://github.com/golang/proposal/blob/master/design/24543-non-cooperative-preemption.md</a>)</li>
+<li>When a continuation is added to a dequeue, another green thread/context can steal the continuation to do it.</li>
+<li>When a goroutine is blocked by I/O, it is added to a deque of a global context. The goroutine is decoupled from the green thread but still coupled to the OS thread. This way the green thread is free to do other works.</li>
+</ul>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://example.org/">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
