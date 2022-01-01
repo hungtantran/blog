@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://betathinker.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Beta Thinker - Random thoughts of a software engineer'
 theme = 'papermod'
