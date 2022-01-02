@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://betathinker.com/</loc>
-    <lastmod>2021-01-01T16:03:38-05:00</lastmod>
+    <lastmod>2021-01-02T16:03:38-05:00</lastmod>
   </url><url>
-    <loc>http://betathinker.com/posts/review_concurrency_in_go/</loc>
-    <lastmod>2021-01-01T16:03:38-05:00</lastmod>
+    <loc>http://betathinker.com/posts/review_coaching_habit/</loc>
+    <lastmod>2021-01-02T16:03:38-05:00</lastmod>
   </url><url>
     <loc>http://betathinker.com/posts/</loc>
+    <lastmod>2021-01-02T16:03:38-05:00</lastmod>
+  </url><url>
+    <loc>http://betathinker.com/posts/review_concurrency_in_go/</loc>
     <lastmod>2021-01-01T16:03:38-05:00</lastmod>
   </url><url>
     <loc>http://betathinker.com/categories/</loc>
