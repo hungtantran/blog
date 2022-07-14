@@ -6,7 +6,56 @@
     <description>Recent content on Beta Thinker - Random thoughts of a software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why religion is important</title>
+      <link>http://betathinker.com/posts/why_religion_is_important/</link>
+      <pubDate>Wed, 14 Jul 2021 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/why_religion_is_important/</guid>
+      <description>https://journals.sagepub.com/doi/10.1177/1069397103037002003</description>
+    </item>
+    
+    <item>
+      <title>Moral should be means to an end, not the end itself</title>
+      <link>http://betathinker.com/posts/moral_should_be_means_to_an_end/</link>
+      <pubDate>Tue, 13 Jul 2021 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/moral_should_be_means_to_an_end/</guid>
+      <description>https://www.bbc.co.uk/ethics/introduction/endinitself.shtml#:~:text=The%20word%20%22end%22%20in%20this,human%20has%20value%20in%20itself.</description>
+    </item>
+    
+    <item>
+      <title>Why learning humanities is important</title>
+      <link>http://betathinker.com/posts/why_learning_humanities_is_important/</link>
+      <pubDate>Tue, 13 Jul 2021 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/why_learning_humanities_is_important/</guid>
+      <description>https://scholars-stage.org/the-fall-of-history-as-a-major-and-as-a-part-of-the-humanities/
+https://conversationswithtyler.com/episodes/marc-andreessen/</description>
+    </item>
+    
+    <item>
+      <title>Why networking is so hard</title>
+      <link>http://betathinker.com/posts/why_networking_so_hard/</link>
+      <pubDate>Fri, 09 Jul 2021 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/why_networking_so_hard/</guid>
+      <description>2 characteristics of networking: Distance and heterogeneity
+Making the below problem harder compare to many other computer system components:
+Performance: throughput, latency Performance requirement is real so many optimization is needed. Making the real world implementation of most networking component extra complicated. Reliability * Compatibility So many abstraction layer to solve the problem of Lack of control on so many component of the system Security Distance, lack of control, heterogeneity, lots of abstraction makes the issue of security much harder Because networking usually has to deal with transferring information over a much longer distance compare to other component in a computer system like CPU, GPU, memory, the above problems become much harder.</description>
+    </item>
+    
+    <item>
+      <title>Y chromosome and Son Preference</title>
+      <link>http://betathinker.com/posts/son_preference_and_y_chromosome/</link>
+      <pubDate>Thu, 08 Jul 2021 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/son_preference_and_y_chromosome/</guid>
+      <description>Today, a question suddenly popped into my head: Does the preference for son common in many cultures have anything to do with the fact that Y chromosome passes virtually unchanged from father to son?
+Many cultures around the world such as Chinese and Indian prefer sons over daughters. I am not a sociologist so I do not pretend to know if the historical cause of this phenomenon has been adequately explained or not.</description>
+    </item>
+    
     <item>
       <title>Podcast Takeaways: Sam Bankman-Fried - Creating a Perfect Market</title>
       <link>http://betathinker.com/posts/review_sam_bankman_fried_on_perfect_market/</link>
@@ -34,7 +83,7 @@ ADHD as I am, I dislikes listening to podcast. The medium conveys information at
       <guid>http://betathinker.com/posts/how_to_advance_conservatism/</guid>
       <description>This post serves as a growing deposit of ideas on how to advance convervatism in the US and the world
 Macro (Being a multiplier source):
- Start a successful organization such as media, social media company, politics strategy consulting, think tank promoting conservatism. Produce impactful culture: successful book, blog, social media channels Major donation with influence to cultural, social institutions such as media, universities, significant politician. Build system to influence people at a city, national or worldwide level.</description>
+Start a successful organization such as media, social media company, politics strategy consulting, think tank promoting conservatism. Produce impactful culture: successful book, blog, social media channels Major donation with influence to cultural, social institutions such as media, universities, significant politician. Build system to influence people at a city, national or worldwide level.</description>
     </item>
     
     <item>
@@ -44,7 +93,7 @@ Macro (Being a multiplier source):
       
       <guid>http://betathinker.com/posts/why_i_hate_progressive_ideas/</guid>
       <description>This post serves as a place for me to distill my thoughts of why I dislike progressive ideas
- Put equality of outcome as the single highest value to drive all decision  Sacrifice liberty Sacrifice justice (equal of treatment) Willing to bring the good, the beauty, the smart, the great down    </description>
+Put equality of outcome as the single highest value to drive all decision Sacrifice liberty Sacrifice justice (equal of treatment) Willing to bring the good, the beauty, the smart, the great down </description>
     </item>
     
     <item>
@@ -55,7 +104,7 @@ Macro (Being a multiplier source):
       <guid>http://betathinker.com/posts/why_war_is_necessary/</guid>
       <description>With the recent invasion of Ukraine by Russian force, people in Western and many Asian countries are united in condemning it.
 War is necessary. War is just an extreme form of competition.
- Advance humanity. Technology comes from war. Unite people at least on one side. There is no real collaboration without real competition. There is no extreme collaboration without extreme competition a.k.a war. War or a credible threat of war makes life more exciting, reminding people of value of life.</description>
+Advance humanity. Technology comes from war. Unite people at least on one side. There is no real collaboration without real competition. There is no extreme collaboration without extreme competition a.k.a war. War or a credible threat of war makes life more exciting, reminding people of value of life.</description>
     </item>
     
     <item>

@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Book Review: Concurrency in Go | Beta Thinker - Random thoughts of a software engineer</title>
-<meta name="keywords" content="" />
+<meta name="keywords" content="">
 <meta name="description" content="I recently finished reading the book &ldquo;Concurrency in Go&rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, convering a mix of concurrency fundamentals and specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.
 A couple of new ideas that I learnt from the books are:">
 <meta name="author" content="">
-<link rel="canonical" href="http://betathinker.com/posts/review_concurrency_in_go/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js" integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI="
+<link rel="canonical" href="http://betathinker.com/posts/review_concurrency_in_go/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6e97a6b79be998515e8c86c68e32a9f7a90e6917f550d2af32568b717f5ca785.css" integrity="sha256-bpemt5vpmFFejIbGjjKp96kOaRf1UNKvMlaLcX9cp4U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="http://betathinker.com/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://betathinker.com/favicon-16x16.png">
@@ -21,7 +21,6 @@ A couple of new ideas that I learnt from the books are:">
 <link rel="mask-icon" href="http://betathinker.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.96.0" />
 <noscript>
     <style>
         #theme-toggle,
@@ -102,7 +101,7 @@ A couple of new ideas that I learnt from the books are:"/>
   "keywords": [
     
   ],
-  "articleBody": "I recently finished reading the book “Concurrency in Go” by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, convering a mix of concurrency fundamentals and specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.\nA couple of new ideas that I learnt from the books are:\n Concurrency is a property of the code, parallelism is a property of the running program. I like this observation. Intuitively, I understsand that concurrency means different codes that run together within the same time window while parallelism means different codes that run at the exact same point in time. While concurrent code can run in parallel or not, parallel code must be concurrent. However, that intuitive understanding is rather descrptive more than definitive. The statement above significantly clarify my intuitive understanding. Communicating sequential processes (CSP) The idea that concurrent processes communicating with each other through channel is not new. It has been there with Linux inter-process communication mechanism like pipe and Unix domain socket. However, the idea of modeling all concurrent code with this formal communication is rather new to me. Before, my mental model around concurrent code cooperation had been centered more around shared memory than communication channels. However, shared memory incurs the downside of having developer making careful decisions and implementations around concurrent access in critical sections to avoid race conditions. I couldn’t believe that I didn’t see this line in the Golang sync library before but now it all makes sense. Other than the Once and WaitGroup types, most are intended for use by low-level library routines. Higher-level synchronization is better done via channels and communication. Goroutine scheduling algorithm: Go runtime uses a work stealing algorithm to schedule go routines. The algorithm uses continuation instead of goroutine as the basic unit. There are 3 primary concepts: OS thread, green thread/context (controlled by GOMAXPROCS env var), continuation/goroutine. (M os threads : P green threads : G goroutine, usually M == P)  When a goroutine reaches a fork-join/preemption point, it can be preempted, and is added to a deque of the existing context. The preemption points include I/O call, function call, syscall and async preemption. Since go 1.14, goroutine can be asynchronously preempted (https://go.dev/doc/go1.14#runtime) so long loop can nolonger deadlock the scheduler or delay GC significantly. (The proposal is at https://github.com/golang/proposal/blob/master/design/24543-non-cooperative-preemption.md) When a continuation is added to a dequeue, another green thread/context can steal the continuation to do it. When a goroutine is blocked by I/O, it is added to a deque of a global context. The goroutine is decoupled from the green thread but still coupled to the OS thread. This way the green thread is free to do other works.   Channel ownership The goroutine instantiates a channel should own it. That means the owner goroutine should be the sole goroutine which is responsible for writing and closing it. A owner goroutine can pass ownership to another goroutine. An exception to this rule that I can think of is the case of multiple producers in the producer-consumer pattern. Little's law to analyze a stable system  L = nW L: the average number of units in the system n: average arrival rate of units W: average time a unit spent in the system Little’s law can be used to analyze a QPS, latency and system resource capacity in a webserver or a streaming processing system\n Adding queue, a.k.a buffered channel, can be dangerous because it can hide deadlock, livelock issues  Some Go-specific details that I picked up:\n context.Context is a data structure with 2 primary elements 1) a done channel 2) a key-value map of values select statement with multiple case clause all ready to be read from will uniformly randomly chose a case statement to evaluate. sync.Pool a concurrent-safe implementation of the object pool pattern. This construct is for optimization. Developers can use it to implement patterns like database connection pool and objective pool. The limitation is that object in pools should be mostly read-only and indistinguishable.  and chan as read-only and write-only channel types respectively. or-done-channel pattern. Instead of writing this verbose piece of code  for { select { case we can shorten it to\nfor val := range or_done(some_channel, done) { .... } ",
+  "articleBody": "I recently finished reading the book “Concurrency in Go” by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, convering a mix of concurrency fundamentals and specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.\nA couple of new ideas that I learnt from the books are:\nConcurrency is a property of the code, parallelism is a property of the running program. I like this observation. Intuitively, I understsand that concurrency means different codes that run together within the same time window while parallelism means different codes that run at the exact same point in time. While concurrent code can run in parallel or not, parallel code must be concurrent. However, that intuitive understanding is rather descrptive more than definitive. The statement above significantly clarify my intuitive understanding. Communicating sequential processes (CSP) The idea that concurrent processes communicating with each other through channel is not new. It has been there with Linux inter-process communication mechanism like pipe and Unix domain socket. However, the idea of modeling all concurrent code with this formal communication is rather new to me. Before, my mental model around concurrent code cooperation had been centered more around shared memory than communication channels. However, shared memory incurs the downside of having developer making careful decisions and implementations around concurrent access in critical sections to avoid race conditions. I couldn’t believe that I didn’t see this line in the Golang sync library before but now it all makes sense. Other than the Once and WaitGroup types, most are intended for use by low-level library routines. Higher-level synchronization is better done via channels and communication. Goroutine scheduling algorithm: Go runtime uses a work stealing algorithm to schedule go routines. The algorithm uses continuation instead of goroutine as the basic unit. There are 3 primary concepts: OS thread, green thread/context (controlled by GOMAXPROCS env var), continuation/goroutine. (M os threads : P green threads : G goroutine, usually M == P) When a goroutine reaches a fork-join/preemption point, it can be preempted, and is added to a deque of the existing context. The preemption points include I/O call, function call, syscall and async preemption. Since go 1.14, goroutine can be asynchronously preempted (https://go.dev/doc/go1.14#runtime) so long loop can nolonger deadlock the scheduler or delay GC significantly. (The proposal is at https://github.com/golang/proposal/blob/master/design/24543-non-cooperative-preemption.md) When a continuation is added to a dequeue, another green thread/context can steal the continuation to do it. When a goroutine is blocked by I/O, it is added to a deque of a global context. The goroutine is decoupled from the green thread but still coupled to the OS thread. This way the green thread is free to do other works. Channel ownership The goroutine instantiates a channel should own it. That means the owner goroutine should be the sole goroutine which is responsible for writing and closing it. A owner goroutine can pass ownership to another goroutine. An exception to this rule that I can think of is the case of multiple producers in the producer-consumer pattern. Little's law to analyze a stable system L = nW L: the average number of units in the system n: average arrival rate of units W: average time a unit spent in the system Little’s law can be used to analyze a QPS, latency and system resource capacity in a webserver or a streaming processing system\nAdding queue, a.k.a buffered channel, can be dangerous because it can hide deadlock, livelock issues Some Go-specific details that I picked up:\ncontext.Context is a data structure with 2 primary elements 1) a done channel 2) a key-value map of values select statement with multiple case clause all ready to be read from will uniformly randomly chose a case statement to evaluate. sync.Pool a concurrent-safe implementation of the object pool pattern. This construct is for optimization. Developers can use it to implement patterns like database connection pool and objective pool. The limitation is that object in pools should be mostly read-only and indistinguishable. \u003c-chan and chan\u003c- as read-only and write-only channel types respectively. or-done-channel pattern. Instead of writing this verbose piece of code for { select { case \u003c-done: .... return case val, ok := \u003c- some_channel: if !ok { return } ..... } } we can shorten it to\nfor val := range or_done(some_channel, done) { .... } ",
   "wordCount" : "741",
   "inLanguage": "en",
   "datePublished": "2021-01-01T16:03:38-05:00",
@@ -139,14 +138,14 @@ A couple of new ideas that I learnt from the books are:"/>
     <nav class="nav">
         <div class="logo">
             <a href="http://betathinker.com/" accesskey="h" title="Beta Thinker - Random thoughts of a software engineer (Alt + H)">Beta Thinker - Random thoughts of a software engineer</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -160,7 +159,7 @@ A couple of new ideas that I learnt from the books are:"/>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-            </span>
+            </div>
         </div>
         <ul id="menu">
         </ul>
@@ -231,6 +230,8 @@ W: average time a unit spent in the system
   </div>
 
   <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
   </footer>
 </article>
     </main>
@@ -240,7 +241,7 @@ W: average time a unit spent in the system
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
