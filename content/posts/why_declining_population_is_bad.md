@@ -1,5 +1,5 @@
 ---
-title: "Why decreasing population is bad"
+title: "Why declining population is bad"
 date: 2021-08-03T16:03:38-05:00
 draft: false
 ---
