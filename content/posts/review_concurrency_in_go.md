@@ -1,6 +1,6 @@
 ---
 title: "Book Review: Concurrency in Go"
-date: 2021-01-01T16:03:38-05:00
+date: 2022-01-01T16:03:38-05:00
 draft: false
 ---
 I recently finished reading the book "Concurrency in Go" by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, convering a mix of concurrency fundamentals and specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrent primitives, the book provides a good review.

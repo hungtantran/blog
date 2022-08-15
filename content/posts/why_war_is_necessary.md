@@ -1,6 +1,6 @@
 ---
 title: "Why is war necessary"
-date: 2021-01-02T16:03:38-05:00
+date: 2022-01-02T16:03:38-05:00
 draft: false
 ---
 With the recent invasion of Ukraine by Russian force, people in Western and many Asian countries are united in condemning it. 

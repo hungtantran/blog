@@ -1,6 +1,6 @@
 ---
 title: "Book Review: The Coaching Habit"
-date: 2021-01-02T16:03:38-05:00
+date: 2022-01-02T16:03:38-05:00
 draft: false
 ---
 Since I became a Tech Lead Manager, I have been holding weekly 1:1s with my reports. While I had unofficially acted as a TLM for sometime now, the formality of my new title brought a whole new sense of responsbility. At the beginning, whenever my reports came to me with an issue, I felt an urge to come up with a perfect answer. "What's the point of me being manager if I could not solve my reports' issues?" I figured. Sometimes, I knew the answer. Lots of time, however, my limited knowledge left me clueless. A couple weeks ago, a report of mine asked me how to best balance between breadth and depth of knowledge. I had been struggling to answer that same question for a while myself. I ended up giving a variant of TBU (True but useless) answers.

@@ -1,6 +1,6 @@
 ---
 title: "Moral should be means to an end, not the end itself"
-date: 2021-07-13T16:03:38-05:00
+date: 2022-07-13T16:03:38-05:00
 draft: true
 ---
 

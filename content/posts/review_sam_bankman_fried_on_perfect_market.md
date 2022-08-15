@@ -1,6 +1,6 @@
 ---
 title: "Podcast Takeaways: Sam Bankman-Fried - Creating a Perfect Market"
-date: 2021-01-17T16:03:38-05:00
+date: 2022-01-17T16:03:38-05:00
 draft: false
 ---
 ```TL;DR: My biggest takeaways is that cryptocurrency can potentially succeed because it can innovate without all the legacy system and intermediaries holding it back. Existing financial system doesn't have that luxury. It has nothing to do with technical feasibility. It has everything to do with legacy and momentum, a classic story of disruption.```

@@ -1,6 +1,6 @@
 ---
 title: "How to advance convervatism"
-date: 2021-01-02T16:03:38-05:00
+date: 2022-01-02T16:03:38-05:00
 draft: false
 ---
 This post serves as a growing deposit of ideas on how to advance convervatism in the US and the world
