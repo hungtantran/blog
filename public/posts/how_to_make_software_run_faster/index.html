@@ -9,7 +9,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I&rsquo;d like to list them here and include tradeoff involving with each:
 Pattern 1: Use faster or more hardware:
-Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud.">
+Common practices: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud.">
 <meta name="author" content="">
 <link rel="canonical" href="http://betathinker.com/posts/how_to_make_software_run_faster/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.6e97a6b79be998515e8c86c68e32a9f7a90e6917f550d2af32568b717f5ca785.css" integrity="sha256-bpemt5vpmFFejIbGjjKp96kOaRf1UNKvMlaLcX9cp4U=" rel="preload stylesheet" as="style">
@@ -61,7 +61,7 @@ Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use 
 </noscript><meta property="og:title" content="How to make software run faster" />
 <meta property="og:description" content="After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I&rsquo;d like to list them here and include tradeoff involving with each:
 Pattern 1: Use faster or more hardware:
-Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud." />
+Common practices: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://betathinker.com/posts/how_to_make_software_run_faster/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-15T16:03:38-05:00" />
@@ -71,7 +71,7 @@ Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use 
 <meta name="twitter:title" content="How to make software run faster"/>
 <meta name="twitter:description" content="After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I&rsquo;d like to list them here and include tradeoff involving with each:
 Pattern 1: Use faster or more hardware:
-Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud."/>
+Common practices: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud."/>
 
 
 <script type="application/ld+json">
@@ -100,12 +100,12 @@ Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use 
   "@type": "BlogPosting",
   "headline": "How to make software run faster",
   "name": "How to make software run faster",
-  "description": "After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I\u0026rsquo;d like to list them here and include tradeoff involving with each:\nPattern 1: Use faster or more hardware:\nCommon practices: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud.",
+  "description": "After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I\u0026rsquo;d like to list them here and include tradeoff involving with each:\nPattern 1: Use faster or more hardware:\nCommon practices: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud.",
   "keywords": [
     
   ],
-  "articleBody": "After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I’d like to list them here and include tradeoff involving with each:\nPattern 1: Use faster or more hardware:\nCommon practices: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud. Difficulties: convince management that engineering hour cost to write faster software is more expensive than the hardware cost. Tradeoff: mostly $ cost Pattern 2: Relax the requirements and/or reduce scope or the software:\nCommon practices: reduce requirements like consistency, durability, reduce the amount of features supported, implement simpler features with less data. Difficulties: must understand the use cases well in order to strike the right balance between requirements vs usefulness. Need to convince other people of the right balance. Tradeoff software’s usefulness or feature completeness Pattern 3: Given a fixed set of requirements, do less stuff by being smarter\nCommon practices: Use faster algorithm, data structure, languages, libraries, framework, faster compiler, take advantage of language-specific tricks, of JIT Difficulties: must be knowledgeable about algorithms, data structure, languages, libraries, and frameworks Tradeoff: potentially more code complexity, less maintainability, less-supported libraries, framework Pattern 4: Take advantage of hardware pattern\nCommon practices: Read/write data from/to disk sequentially instead of randomly, batching data when writing to disk or sending over network, use faster hardware instruction Difficulties: must be knowledgeable about low-level hardware, need to restructure code to take advantage of these patterns Tradeoff: potentially more code complexity, less maintainability, less portability Pattern 5: Parallelize code\nCommon practices: Use multi-processing, multi-threading, use GPU instead of CPU for ML Difficulties: need to be knowledgeable about Tradeoff: more code complexity, more bugs, not every logic can be parallelize Pattern 6: Caching, precomputing\nCommon practices: pre-compute result and store in app-level cache, take advantage of OS cache, hardware cache Difficulties: cache invalidation, must be knowledgeable about low-level OS and hardware to take advantage of them well Tradeoff: more code complexity, less consistency, durability, $ cost Pattern 7: Move things closer to each other to reduce latency\nCommon practices: Move data closer to computation, move data/compute closer to clients Difficulties: usually this can reduce consistency of the system by keeping a source of truth, and copies closer to clients/computation Tradeoff: more code complexity, less consistency, $ cost ",
-  "wordCount" : "400",
+  "articleBody": "After almost a decade working as a professional software engineer, I have seen that there are only a few fundamental levers that an engineer can use to make software more performant, either lower latency or higher through. I’d like to list them here and include tradeoff involving with each:\nPattern 1: Use faster or more hardware:\nCommon practices: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud.\nDifficulties: convince management that the engineering hour cost to write faster software is more expensive than the hardware cost.\nTradeoff: mostly $ cost\nPattern 2: Relax the requirements and/or reduce scope or the software:\nCommon practices: reduce requirements like consistency, durability, reduce the amount of features supported, implement simpler features with less data.\nDifficulties: must understand the use cases well in order to strike the right balance between requirements vs usefulness. Need to convince other people of the right balance.\nTradeoff software’s usefulness or feature completeness\nPattern 3: Given a fixed set of requirements, do less stuff by being smarter\nCommon practices: Use faster algorithm, data structure, languages, libraries, framework, faster compiler, take advantage of language-specific tricks, of JIT\nDifficulties: must be knowledgeable about algorithms, data structure, languages, libraries, and frameworks\nTradeoff: potentially more code complexity, less maintainability, less-supported libraries, framework\nPattern 4: Take advantage of hardware pattern\nCommon practices: Read/write data from/to disk sequentially instead of randomly, batching data when writing to disk or sending over network, use faster hardware instruction\nDifficulties: must be knowledgeable about low-level hardware, need to restructure code to take advantage of these patterns\nTradeoff: potentially more code complexity, less maintainability, less portability\nPattern 5: Parallelize code\nCommon practices: Use multi-processing, multi-threading, use GPU instead of CPU for ML\nDifficulties: need to be knowledgeable about\nTradeoff: more code complexity, more bugs, not every logic can be parallelize\nPattern 6: Caching, precomputing\nCommon practices: pre-compute result and store in app-level cache, take advantage of OS cache, hardware cache\nDifficulties: cache invalidation, must be knowledgeable about low-level OS and hardware to take advantage of them well\nTradeoff: more code complexity, less consistency, durability, $ cost\nPattern 7: Move things closer to each other to reduce latency\nCommon practices: Move data closer to computation, move data/compute closer to clients\nDifficulties: usually this can reduce consistency of the system by keeping a source of truth, and copies closer to clients/computation\nTradeoff: more code complexity, less consistency, $ cost\n",
+  "wordCount" : "401",
   "inLanguage": "en",
   "datePublished": "2022-08-15T16:03:38-05:00",
   "dateModified": "2022-08-15T16:03:38-05:00",
@@ -184,59 +184,87 @@ Common practices: Upgrade CPU, memory, network equipments, use custom ASIC, use 
 <ul>
 <li>
 <p>Pattern 1: Use faster or more hardware:</p>
-<ul>
-<li><code>Common practices</code>: Upgrade CPU, memory, network equipments, use custom ASIC, use more machines, use the cloud.</li>
-<li><code>Difficulties</code>: convince management that engineering hour cost to write faster software is more expensive than the hardware cost.</li>
-<li><code>Tradeoff</code>: mostly $ cost</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: Upgrade CPU, memory, network equipment, use custom ASIC, use more machines, use the cloud.</p>
+</li>
+<li>
+<p><code>Difficulties</code>: convince management that the engineering hour cost to write faster software is more expensive than the hardware cost.</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: mostly $ cost</p>
 </li>
 <li>
 <p>Pattern 2: Relax the requirements and/or reduce scope or the software:</p>
-<ul>
-<li><code>Common practices</code>: reduce requirements like consistency, durability, reduce the amount of features supported, implement simpler features with less data.</li>
-<li><code>Difficulties</code>: must understand the use cases well in order to strike the right balance between requirements vs usefulness. Need to convince other people of the right balance.</li>
-<li><code>Tradeoff</code> software&rsquo;s usefulness or feature completeness</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: reduce requirements like consistency, durability, reduce the amount of features supported, implement simpler features with less data.</p>
+</li>
+<li>
+<p><code>Difficulties</code>: must understand the use cases well in order to strike the right balance between requirements vs usefulness. Need to convince other people of the right balance.</p>
+</li>
+<li>
+<p><code>Tradeoff</code> software&rsquo;s usefulness or feature completeness</p>
 </li>
 <li>
 <p>Pattern 3: Given a fixed set of requirements, do less stuff by being smarter</p>
-<ul>
-<li><code>Common practices</code>: Use faster algorithm, data structure, languages, libraries, framework, faster compiler, take advantage of language-specific tricks, of JIT</li>
-<li><code>Difficulties</code>: must be knowledgeable about algorithms, data structure, languages, libraries, and frameworks</li>
-<li><code>Tradeoff</code>: potentially more code complexity, less maintainability, less-supported libraries, framework</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: Use faster algorithm, data structure, languages, libraries, framework, faster compiler, take advantage of language-specific tricks, of JIT</p>
+</li>
+<li>
+<p><code>Difficulties</code>: must be knowledgeable about algorithms, data structure, languages, libraries, and frameworks</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: potentially more code complexity, less maintainability, less-supported libraries, framework</p>
 </li>
 <li>
 <p>Pattern 4: Take advantage of hardware pattern</p>
-<ul>
-<li><code>Common practices</code>: Read/write data from/to disk sequentially instead of randomly, batching data when writing to disk or sending over network, use faster hardware instruction</li>
-<li><code>Difficulties</code>: must be knowledgeable about low-level hardware, need to restructure code to take advantage of these patterns</li>
-<li><code>Tradeoff</code>: potentially more code complexity, less maintainability, less portability</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: Read/write data from/to disk sequentially instead of randomly, batching data when writing to disk or sending over network, use faster hardware instruction</p>
+</li>
+<li>
+<p><code>Difficulties</code>: must be knowledgeable about low-level hardware, need to restructure code to take advantage of these patterns</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: potentially more code complexity, less maintainability, less portability</p>
 </li>
 <li>
 <p>Pattern 5: Parallelize code</p>
-<ul>
-<li><code>Common practices</code>: Use multi-processing, multi-threading, use GPU instead of CPU for ML</li>
-<li><code>Difficulties</code>: need to be knowledgeable about</li>
-<li><code>Tradeoff</code>: more code complexity, more bugs, not every logic can be parallelize</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: Use multi-processing, multi-threading, use GPU instead of CPU for ML</p>
+</li>
+<li>
+<p><code>Difficulties</code>: need to be knowledgeable about</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: more code complexity, more bugs, not every logic can be parallelize</p>
 </li>
 <li>
 <p>Pattern 6: Caching, precomputing</p>
-<ul>
-<li><code>Common practices</code>: pre-compute result and store in app-level cache, take advantage of OS cache, hardware cache</li>
-<li><code>Difficulties</code>: cache invalidation, must be knowledgeable about low-level OS and hardware to take advantage of them well</li>
-<li><code>Tradeoff</code>: more code complexity, less consistency, durability, $ cost</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: pre-compute result and store in app-level cache, take advantage of OS cache, hardware cache</p>
+</li>
+<li>
+<p><code>Difficulties</code>: cache invalidation, must be knowledgeable about low-level OS and hardware to take advantage of them well</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: more code complexity, less consistency, durability, $ cost</p>
 </li>
 <li>
 <p>Pattern 7: Move things closer to each other to reduce latency</p>
-<ul>
-<li><code>Common practices</code>: Move data closer to computation, move data/compute closer to clients</li>
-<li><code>Difficulties</code>: usually this can reduce consistency of the system by keeping a source of truth, and copies closer to clients/computation</li>
-<li><code>Tradeoff</code>: more code complexity, less consistency, $ cost</li>
-</ul>
+</li>
+<li>
+<p><code>Common practices</code>: Move data closer to computation, move data/compute closer to clients</p>
+</li>
+<li>
+<p><code>Difficulties</code>: usually this can reduce consistency of the system by keeping a source of truth, and copies closer to clients/computation</p>
+</li>
+<li>
+<p><code>Tradeoff</code>: more code complexity, less consistency, $ cost</p>
 </li>
 </ul>
 
