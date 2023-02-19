@@ -14,7 +14,10 @@ The above is the idealized version. In practices, lots of time, managers are jud
 * How much resources (people) they have/control.
 
 The main source of leverages of managers to achieve above goals are, subjectively ranked in term of importance from most to least:
-* Setting goals and directions: choosing the right goals, keeping focus, communicate clearly what they are, why they are important, success criteria
+* Setting goals and directions:
+  * Choosing the right goals, communicate clearly what they are, why they are important, success criteria
+  * Keeping focus
+  * Writing strategy, proposal docs
 * Helping people more effective:
   * Growing people: giving feedback, coaching, mentoring, giving opportunities
   * Giving clear communications, give clarifications, avoid micromanagement, prevent organization distractions, prevent personal distraction
