@@ -6,7 +6,92 @@
     <description>Recent content in Posts on Beta Thinker - Random thoughts of a software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Feb 2023 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What does manager do?</title>
+      <link>http://betathinker.com/posts/what_does_manager_do/</link>
+      <pubDate>Sun, 19 Feb 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/what_does_manager_do/</guid>
+      <description>What does manager do? What are the difference between leadership and management?
+Managers&amp;rsquo; inputs are business goals and human resources. Outputs are business results. The measure of success of a manager is how well he can maximize output with the least amount of resources.
+The above is the idealized version. In practices, lots of time, managers are judged by:
+How well they present and make a case for their business impact than their actual impact.</description>
+    </item>
+    
+    <item>
+      <title>Should society optimize more for worker rather than consumer</title>
+      <link>http://betathinker.com/posts/should_society_optimize_more_for_worker_rather_than_consumer/</link>
+      <pubDate>Sat, 18 Feb 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/should_society_optimize_more_for_worker_rather_than_consumer/</guid>
+      <description>Society has always consider work as a means to an end: to create some concrete product, or render some service. Would it make sense to start consider work as an end in itself?
+Work by itself can produce some very important end &amp;ldquo;products&amp;rdquo; other than its concrete product or service output, such as, in order of importance:
+Sense of meaning Environment for social interaction Mental exercise Physical exercise The counter argument to the above would be there are better ways than work to accomplish those goals.</description>
+    </item>
+    
+    <item>
+      <title>Some potential consequences of a AI</title>
+      <link>http://betathinker.com/posts/some_potential_consequence_of_ai/</link>
+      <pubDate>Sat, 18 Feb 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/some_potential_consequence_of_ai/</guid>
+      <description>Proliferation of derivatives content and noise:
+Derivatives arts like music, visual arts, writing content will be abundant and cheap. Lots of low-level people who make &amp;ldquo;mechanical&amp;rdquo; arts will be replaced by AI. More concentration of art market: The number of no-name digital artists, musicians, copywriters will decrease. The high-level artists whose main value proposition is their brands will be even more powerful since they can crank out content under their brand name more.</description>
+    </item>
+    
+    <item>
+      <title>Why software engineering is a low status job</title>
+      <link>http://betathinker.com/posts/why_software_engineering_is_a_low_status_job/</link>
+      <pubDate>Fri, 03 Feb 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/why_software_engineering_is_a_low_status_job/</guid>
+      <description>Recently I have been sensing that software engineering is a low status job. Even though the popularity and income potential of software engineering is growing quickly, the social status of software engineers still seem somewhat low. For an average Joe, a software engineering doesn&amp;rsquo;t have quite the same social cachet as other typical prestigious jobs in society like a doctor, a lawyer, a management consultant, an investment banker,
+I will try to go through some potential reasons why software engineering is a relatively low status job compared to its current earning potential</description>
+    </item>
+    
+    <item>
+      <title>Judeo Christian</title>
+      <link>http://betathinker.com/posts/judeo_christian/</link>
+      <pubDate>Mon, 09 Jan 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/judeo_christian/</guid>
+      <description>It is a common conception that the US is founded or heavily influenced by Judeo Christianity and Anglo Saxon culture. However, what exactly does that mean? The term usually conjures up some image of individualism, classical liberalism, Christian religion. Those are vague and don&amp;rsquo;t sufficiently explain what concrete characteristics of American culture it brings about.
+To start, let&amp;rsquo;s list out some characteristics of Judeo Christianity and Anglo Saxon culture:
+Monotheism, concept of one God, omnipotent god, human-.</description>
+    </item>
+    
+    <item>
+      <title>Some behavioral differences between educated American and Vietnamese</title>
+      <link>http://betathinker.com/posts/some_behaviorial_differences_between_american_and_vietnamese/</link>
+      <pubDate>Mon, 09 Jan 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/some_behaviorial_differences_between_american_and_vietnamese/</guid>
+      <description>Some differences that I observed exist between educated, smart Vietnamese and Americans:
+American read and, more importantly, write books more. Vietnamese are more flexible and adhoc when dealing with problems. I doubt that a similar version of the US supreme court, in which justices engage in highly technical, rigorously logical subtleties of each word in a constitution, can exists. Deep down, Vietnamese don&amp;rsquo;t like inflexibility and rationality in social decisions. Most American are also like that but there exists some segment of elite American intellectuals who value and believe in rationality.</description>
+    </item>
+    
+    <item>
+      <title>Some of my behaviors</title>
+      <link>http://betathinker.com/posts/some_of_my_behaviors/</link>
+      <pubDate>Mon, 09 Jan 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/some_of_my_behaviors/</guid>
+      <description>A collections of my own behaviors that I want to note down:
+Don&amp;rsquo;t like answering fact questions e.g what happened, who did what, how it happened. Prefer answering opinion/judgement questions e.g what do you think about event A, person B, idea C, action D Think and judge more than do and act. </description>
+    </item>
+    
+    <item>
+      <title>KTLO, optimization, and foundation engineering work</title>
+      <link>http://betathinker.com/posts/ktlo_optimization_and_foundation_engineering_work/</link>
+      <pubDate>Thu, 24 Nov 2022 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/ktlo_optimization_and_foundation_engineering_work/</guid>
+      <description>It occurs to me today that there are broadly three types of engineering works with respect to how they contribute to the product of a tech company:
+Keep-the-light-on (KTLO): these are works to keep the product running, not changing it. Usually, they include oncall, small refactoring work to reduce internal technical debts.
+Product optimization: these are the types of work that locally optimizes the existing product at the margin. They make the product better, more scalable, performant, and reliable.</description>
+    </item>
+    
     <item>
       <title>Why a small team of great engineers can be extremely productive</title>
       <link>http://betathinker.com/posts/why_a_small_team_of_great_engineers_can_be_extremely_productive/</link>
