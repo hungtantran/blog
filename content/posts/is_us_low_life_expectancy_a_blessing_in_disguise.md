@@ -1,5 +1,5 @@
 ---
-title: "Is US's low life expectancy a blessing in disguise"
+title: "Is US's low life expectancy a blessing in disguise?"
 date: 2022-08-14T16:03:38-05:00
 draft: true
 ---
