@@ -12,4 +12,4 @@ I believe that any large group of people are fundamental driven by emotion, not 
 
 The left is driven mainly by a coalition of 1) people who perceive themselves as lack of power and who envy those with power and 2) people who sympathize with the former group. The right is driven mainly by a coalition of 1) people who fear for their own and their group's survival, not only in the physical sense but also in the sense of fear of the unknown, of losing freedom, losing tradition, identity, familiarity, cultural power, etc and 2) people who desire power and want to maintain the status quo. We can also argue that group (1) from the left and group (1) from the right actually have the same motive. Both fear for their own survival, but the left fears from the below position and the right fears from the status quo, the above position.
 
-People who are principled and not driven deep down inside by one of the above emotion are exceedingly rare.
+People who are principled and not driven deep down inside by one of the above emotion are exceedingly rare, even the smartest ones.
