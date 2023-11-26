@@ -6,7 +6,27 @@
     <description>Recent content on Beta Thinker - Random thoughts of a software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jul 2023 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2023 16:03:38 -0500</lastBuildDate><atom:link href="http://betathinker.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moral vs Tradition vs Law</title>
+      <link>http://betathinker.com/posts/moral_tradition_law/</link>
+      <pubDate>Wed, 15 Nov 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/moral_tradition_law/</guid>
+      <description>The set of acceptable behaviors for a member of a society is usually constrained by a combination of:
+Moral, tradition/social norms/religious teaching: Fewer than laws in number, less specific, more flexible, broader, slower to change Enforced mainly by both social pressure and personal conscience. Laws/Constitution: More than moral in number, more specific, less flexible, narrower, faster to change Turtles all the way down, laws are developed based on moral foundation Enforced mainly by the government I have often wondered in a well-functioning society, when a rule should be a law and when it should be a moral.</description>
+    </item>
+    
+    <item>
+      <title>Left vs Right</title>
+      <link>http://betathinker.com/posts/left_vs_right/</link>
+      <pubDate>Sun, 08 Oct 2023 16:03:38 -0500</pubDate>
+      
+      <guid>http://betathinker.com/posts/left_vs_right/</guid>
+      <description>There are a lot of efforts to compare between the left and the right views of the political spectrum like the left is pro tax, pro welfare, pro women right, minority right, communist, etc the right is anti tax, pro free speech, prot nationalism, pro capitalism, religious.
+I believe those are only temporary views of each side at the moment. They are not fundamental, not at the core of the division.</description>
+    </item>
+    
     <item>
       <title>Streaming vs batching</title>
       <link>http://betathinker.com/posts/streaming_vs_batching_processing/</link>
@@ -24,7 +44,7 @@ Harder to achieve good throughput: processing a bunch of data point in a batchin
       <pubDate>Thu, 06 Jul 2023 16:03:38 -0500</pubDate>
       
       <guid>http://betathinker.com/posts/never_let_a_good_crisis_go_to_waste/</guid>
-      <description>The older I am, the more I appreciate the wisdom of the quote &amp;ldquo;Never let a good crisis go to waste.&amp;rdquo; Individual people, small group, large group, a company, a society, all of them wants some small change to keep life exciting but hate large change. Meaningful change so so rarely happen from within even when it is needed. Like the proverbial &amp;ldquo;slow boiling frog,&amp;rdquo; people won&amp;rsquo;t make significant change if their situation deteriorate slowly.</description>
+      <description>The older I am, the more I appreciate the wisdom of the quote &amp;ldquo;Never let a good crisis go to waste.&amp;rdquo; Individual people, small group, large group, a company, a society, all of them wants some small change to keep life exciting but hate large changes. Meaningful changes rarely happen from within even when it is needed. Like the proverbial &amp;ldquo;slow boiling frog,&amp;rdquo; people won&amp;rsquo;t make significant change if their situation deteriorate slowly.</description>
     </item>
     
     <item>
@@ -99,7 +119,7 @@ I will try to go through some potential reasons why software engineering is a re
       <guid>http://betathinker.com/posts/judeo_christian/</guid>
       <description>It is a common conception that the US is founded or heavily influenced by Judeo Christianity and Anglo Saxon culture. However, what exactly does that mean? The term usually conjures up some image of individualism, classical liberalism, Christian religion. Those are vague and don&amp;rsquo;t sufficiently explain what concrete characteristics of American culture it brings about.
 To start, let&amp;rsquo;s list out some characteristics of Judeo Christianity and Anglo Saxon culture:
-Monotheism, concept of one God, omnipotent god, human-.</description>
+Monotheism, concept of one God, omnipotent god.</description>
     </item>
     
     <item>
@@ -345,6 +365,15 @@ Advance humanity. Technology comes from war. Unite people at least on one side. 
       <guid>http://betathinker.com/posts/review_concurrency_in_go/</guid>
       <description>I recently finished reading the book &amp;ldquo;Concurrency in Go&amp;rdquo; by Katherine Cox-Buday. It is a relatively short book. A focused read can finish it in a few days. The content is relatively basic, converting a mix of concurrency fundamentals and specific patterns commonly found in Go concurrent code. Overall, for someone who is new to Go concurrency primitives, the book provides a good review.
 A couple of new ideas that I learnt from the books are:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://betathinker.com/posts/moral_degradation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://betathinker.com/posts/moral_degradation/</guid>
+      <description></description>
     </item>
     
   </channel>
